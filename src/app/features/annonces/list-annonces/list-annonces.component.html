@@ -1,0 +1,32 @@
+
+<h1>List des annonces</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Titre</th>
+      <th>Image</th>
+      <th>Type de Bien</th>
+      <th>Prix</th>
+      <th>Adresse</th>
+      <th>Surface(m²)</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  <ng-container *ngFor="let annonce of listAnnonces">
+    <tr>
+      <td>{{ annonce.id }}</td>
+      <td>{{ annonce.titre }}</td>
+      <td><img src="{{annonce.image}}" width="50%"></td>
+      <td>{{ annonce.typeBien }}</td>
+      <td>{{ annonce.prix+' DT' }} </td>
+      <td>{{ annonce.adresse }}</td>
+      <td>{{ annonce.surface+' m²' }}</td>
+      
+      <td><a [routerLink]="['/list', annonce.id]">show annonce</a></td>
+    </tr>
+  </ng-container>
+  </tbody>
+
+</table>

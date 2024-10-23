@@ -1,0 +1,203 @@
+.categories{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.categories .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    margin: 20px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header.cataloguee {
+    background-color: rgb(75, 168, 205);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card-header.cataloguee h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .card-header.livrable {
+    background-color: purple;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card-header.livrable h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .card-header.kpis {
+    background-color: goldenrod;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card-header.kpis h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .card-header.val {
+    background-color: green;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card-header.val h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .card-header.service {
+    background-color: rgb(75, 168, 205);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .card-header.service h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .card-image {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100%; /* Make sure the container has a height */
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-body .itemContainer {
+   
+        display: flex;
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center */
+        height: 100%; /* Make sure the container has a height */
+
+  }
+  
+  .card-body .itemContainer .left .detailItem,
+  .card-body .itemContainer .first-center .detailItem {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .card-body .itemContainer .left .detailItem .itemKey,
+  .card-body .itemContainer .first-center .detailItem .itemKey {
+    font-weight: bold;
+    color: gray;
+    margin-right: 5px;
+  }
+  
+  .card-body .itemContainer .left .detailItem .itemValue,
+  .card-body .itemContainer .first-center .detailItem .itemValue {
+    font-weight: 300;
+  }
+  
+  .card-body .itemContainer .left .detailItem .itemValue.pending,
+  .card-body .itemContainer .first-center .detailItem .itemValue.pending {
+    color: goldenrod;
+  }
+  
+  .card-body .itemContainer .left .detailItem .itemValue.active,
+  .card-body .itemContainer .first-center .detailItem .itemValue.active {
+    color: green;
+  }
+  
+  .card-body .client {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  .card-body .client .item {
+    font-weight: bold;
+  }
+  
+  .card-body .description {
+    width: max-content;
+    font-size: 12px;
+  }
+  
+  .card-body .description .item {
+    font-weight: bold;
+  }
+  
+  .card-body p {
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .card-footer .button {
+    background-color: #008CBA; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Text size */
+    cursor: pointer; /* Cursor style */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth hover effect */
+}
+
+.button:hover {
+    background-color: #005f7a; /* Darken background on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.button:active {
+    background-color: #004b60; /* Further darken background when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Decrease shadow when clicked */
+}
+
+.card-footer .like-count {
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Vertically center the text and icon */
+    font-size: 18px; /* Font size */
+    color: #333; /* Text color */
+    font-weight: 600; /* Bold font */
+    margin: 10px 0; /* Spacing around the text */
+}
+
+.card-footer .like-count .like-icon {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 22px; /* Size of the icon */
+    color: #008CBA; /* Color of the icon (matches the button) */
+}

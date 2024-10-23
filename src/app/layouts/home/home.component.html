@@ -1,0 +1,26 @@
+<div>
+    <h1>{{ title }}</h1>
+    
+    <!-- <input type="text" [(ngModel)]="seachCategory" class="form-control" placeholder="search category"> -->
+    <div class="categories" >
+        <div *ngFor="let category of listAnnonces">
+            <div class="card" >
+                <div class="title">
+                  <h4>{{category.titre}}</h4>
+                </div>
+                <div class="card-body">
+                      <div class="itemContainer">
+                    
+                        <div class="card-image">
+                            <img [src]="category.image" alt="">
+                        </div>                 
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a [routerLink]="['/list', category.id]">Show details </a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    </div>
